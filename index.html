@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | Social links profile</title>
@@ -12,23 +16,101 @@
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+
+    :root{
+      --background-theme: hsl(0, 0%, 8%);
+      --card-theme: hsl(0, 0%, 12%);
+      --button-theme: hsl(0, 0%, 20%);
+      --subject-theme: hsl(75, 94%, 57%);
+      --font-theme: hsl(0, 0%, 100%);
+    }
+
+    body{
+      color: var(--font-theme);
+      font-family: "Inter", sans-serif;
+      font-size: 0.9rem;
+      margin: 0;
+      text-align: center;
+    }
+
+    .container{
+      background-color: var(--background-theme);
+      display: flex;
+      height: 100vh;
+      padding: 20px 10px;
+    }
+
+    .card-wrapper{
+      background-color: var(--card-theme);
+      border-radius: 10px;
+      margin: auto;
+      padding: 20px;
+      width: 350px;
+    }
+
+    .card-wrapper > div{
+      margin-top: 10px;
+    }
+
+    .card-avatar{
+      width: 25%;
+      border-radius: 100%;
+    }
+
+    .card-username{
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .card-location{
+      color: var(--subject-theme);
+      font-weight: 600;
+    }
+
+    .card-description{
+      margin: 30px !important;
+    }
+
+    .card-button-group{
+
+    }
+
+    .card-button{
+      background-color: var(--button-theme);
+      border-radius: 10px;
+      font-weight: 700;
+      margin: 10px 10px;
+      padding: 10px;
+    }
+
+    @media screen and (max-width: 375px) {
+
+    }
   </style>
 </head>
 <body>
 
-  Jessica Randall
-  London, United Kingdom
-  "Front-end developer and avid reader."
-
-  GitHub
-  Frontend Mentor
-  LinkedIn
-  Twitter
-  Instagram
+  <div class="container">
+    <div class="card-wrapper">
+      <img class="card-avatar" src="assets//images/avatar-jessica.jpeg" alt="avatar">
+      <div class="card-username">Jessica Randall</div>
+      <div class="card-location">London, United Kingdom</div>
+      <div class="card-description">"Front-end developer and avid reader."</div>
+      <div class="card-button-group">
+        <div class="card-button">GitHub</div>
+        <div class="card-button">Frontend Mentor</div>
+        <div class="card-button">LinkedIn</div>
+        <div class="card-button">Twitter</div>
+        <div class="card-button">Instagram</div>
+      </div>
+    </div>
+  </div>
   
+<!-- 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+-->
 </body>
 </html>
